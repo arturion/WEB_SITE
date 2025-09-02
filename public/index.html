@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Estetico - Vetrina + Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Snipcart -->
+  <script src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+  <div hidden id="snipcart" data-api-key="YOUR_SNIP_KEY"></div>
+  <!-- Alpine.js + Swiper -->
+  <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body class="font-sans text-gray-800">
+  <!-- HERO DUAL -->
+  <section class="relative h-screen bg-pink-100 flex items-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-pink-200 to-transparent opacity-80"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-pink-900 mb-8">Centro Estetico "Bellezza Naturale"</h1>
+      <div class="flex gap-4">
+        <a href="#servizi" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-semibold">Scopri i Servizi</a>
+        <a href="#shop" class="bg-white hover:bg-pink-50 text-pink-600 border-2 border-pink-600 px-6 py-3 rounded-lg font-semibold">Nuovi Arrivi</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- SERVIZI CROSS -->
+  <section id="servizi" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Servizi & Prodotti Correlati</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Servizio 1 -->
+        <div class="bg-pink-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Massaggio Rigenerante</h3>
+          <p class="mb-4">20% di sconto sul siero idratante se prenoti entro 7 giorni.</p>
+          <button class="snipcart-add-item bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded" 
+                  data-item-id="siero-idratante" 
+                  data-item-price="35.00" 
+                  data-item-name="Siero Idratante" 
+                  data-item-url="/">
+            Acquista + Prenota
+          </button>
+        </div>
+        <!-- Servizio 2 -->
+        <div class="bg-pink-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Trattamento Capelli</h3>
+          <p class="mb-4">Con olii naturali per capelli lucenti. Kit manutenzione a casa incluso.</p>
+          <button class="snipcart-add-item bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded" 
+                  data-item-id="kit-capelli" 
+                  data-item-price="45.00" 
+                  data-item-name="Kit Manutenzione Capelli" 
+                  data-item-url="/">
+            Acquista Kit
+          </button>
+        </div>
+        <!-- Servizio 3 -->
+        <div class="bg-pink-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Depilazione Definitiva</h3>
+          <p class="mb-4">Lampada IPL inclusa per la cura a casa.</p>
+          <button class="snipcart-add-item bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded" 
+                  data-item-id="lampada-ipl" 
+                  data-item-price="120.00" 
+                  data-item-name="Lampada IPL" 
+                  data-item-url="/">
+            Acquista Lampada
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE METODO -->
+  <section class="py-16 bg-pink-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Il Metodo del Centro</h2>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center">
+          <img src="https://via.placeholder.com/150" class="w-24 h-24 mx-auto rounded-full mb-4" alt="Trattamento">
+          <p>1. Trattamento in centro</p>
+        </div>
+        <div class="text-center">
+          <img src="https://via.placeholder.com/150" class="w-24 h-24 mx-auto rounded-full mb-4" alt="Prodotti">
+          <p>2. Prodotti per la manutenzione a casa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROUSEL TREND -->
+  <section id="shop" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Nuovi Arrivi & Offerte</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-pink-50 p-6 rounded-lg">
+            <img src="https://via.placeholder.com/300x200" class="w-full mb-4 rounded">
+            <h4 class="text-xl font-semibold mb-2">Nuovo Siero Anti-Age</h4>
+            <button class="snipcart-add-item w-full bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded" 
+                    data-item-id="siero-antiage" 
+                    data-item-price="55.00" 
+                    data-item-name="Siero Anti-Age" 
+                    data-item-url="/">
+              Aggiungi al carrello
+            </button>
+          </div>
+          <div class="swiper-slide bg-pink-50 p-6 rounded-lg">
+            <img src="https://via.placeholder.com/300x200" class="w-full mb-4 rounded">
+            <h4 class="text-xl font-semibold mb-2">Pacchetto 3 Massaggi -10%</h4>
+            <a href="/prenota" class="block text-center bg-white hover:bg-pink-50 text-pink-600 border-2 border-pink-600 px-4 py-2 rounded">Prenota Ora</a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIANZE -->
+  <section class="py-16 bg-pink-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Cosa Dicono i Clienti</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="https://via.placeholder.com/100" class="w-16 h-16 rounded-full mb-4" alt="Cliente">
+          <p class="mb-4">"Il massaggio linfatico ha cambiato il mio corpo! Ho comprato anche l'olio di mandorle."</p>
+          <button class="snipcart-add-item bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded" 
+                  data-item-id="olio-mandorle" 
+                  data-item-price="25.00" 
+                  data-item-name="Olio di Mandorle" 
+                  data-item-url="/">
+            Scopri l'Olio
+          </button>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="https://via.placeholder.com/100" class="w-16 h-16 rounded-full mb-4" alt="Cliente">
+          <p class="mb-4">"Il siero anti-age è fantastico! Il mio viso è più luminoso dopo 2 settimane."</p>
+          <button class="snipcart-add-item bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded" 
+                  data-item-id="siero-antiage" 
+                  data-item-price="55.00" 
+                  data-item-name="Siero Anti-Age" 
+                  data-item-url="/">
+            Acquista Siero
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER + CONTATTI -->
+  <footer class="bg-pink-900 text-white py-8">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contatti</h3>
+          <p>📞 +39 123 456 789</p>
+          <p>📧 info@centroestetico.it</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <h3 class="text-xl font-semibold mb-4">Mappa</h3>
+          <iframe src="https://maps.google.com/maps?q=roma&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" height="150" frameborder="0" class="rounded"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script per Swiper -->
+  <script>
+    new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      breakpoints: { 768: { slidesPerView: 2 } }
+    });
+  </script>
+</body>
+</html>
